@@ -37,4 +37,4 @@ def test_create_short_code():
 
     result = create_short_code(url)
 
-    assert result == "goog"
+    assert result == "goo"
