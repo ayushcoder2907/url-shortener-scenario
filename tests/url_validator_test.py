@@ -38,3 +38,15 @@ def test_create_short_code():
     result = create_short_code(url)
 
     assert result == "goo"
+
+
+def test_has_valid_domain():
+    """Test domain validation for URLs with and without a dot."""
+    assert has_valid_domain("https://example.com") == True
+    assert has_valid_domain("https://localhost") == False
+
+
+def test_normalize_url():
+    """Test whitespace trimming and trailing slash removal."""
+    assert normalize_url("  https://example.com/ ") == "https://example.com"
+    assert normalize_url("https://example.com///") == "https://example.com"
