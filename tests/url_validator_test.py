@@ -31,10 +31,10 @@ def test_url_type_error():
         is_valid_url(12345)
 
 
-# def test_create_short_code():
-#     """Test short code generation."""
-#     url = "https://google.com"
-#
-#     result = create_short_code(url)
-#
-#     assert result == "goo"
+def test_create_short_code():
+    """Test short code generation."""
+    url = "https://google.com"
+
+    result = create_short_code(url)
+
+    assert result == "goog"
